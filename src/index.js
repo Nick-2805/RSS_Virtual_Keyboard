@@ -187,7 +187,6 @@ window.addEventListener('load', () => {
 				}else {
 					btn.setAttribute('id', 'active')
 				}
-				// 			/************************************************ */
 				if(btn.firstChild.innerHTML == 'Enter') {
 				textar.textContent +=' \n';
 				}else if(btn.firstChild.innerHTML == 'Del'){
@@ -203,7 +202,7 @@ window.addEventListener('load', () => {
 				textar.textContent += btn.firstChild.innerHTML;
 
 				}
-		/************************************************ */
+
 				
 				document.onkeyup = function(){
 					
@@ -229,23 +228,16 @@ window.addEventListener('load', () => {
 		})
 		
 		/******************************* */
-		//document.removeEventListener('keydown', event_for_keyboard, false)
 	}
 	document.addEventListener('keydown', event_for_keyboard, false)
 
-/*************************** */
-function backspace(text) {
-	console.log(text)
-	let arr = text.toString().split('');
-	arr.pop();
-	return arr.join('');
-}
-
-
-/***************************** */	
+	function backspace(text) {
+		console.log(text)
+		let arr = text.toString().split('');
+		arr.pop();
+		return arr.join('');
+	}
 })
-
-/****************************************************** */
 
 // if 'CapsLock', change hight
 function changeHight() {
